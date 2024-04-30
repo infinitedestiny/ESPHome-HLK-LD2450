@@ -287,7 +287,7 @@ CONFIG_SCHEMA = uart.UART_DEVICE_SCHEMA.extend(
             accuracy_decimals=0,
         ),
         cv.Optional(CONF_MAX_DISTANCE_MARGIN, default="25cm"): cv.All(
-            cv.distance, cv.Range(min=0.0, max=6.0)
+            cv.distance, cv.Range(min=0.0, max=8.0)
         ),
         cv.Optional(CONF_RESTART_BUTTON): button.button_schema(
             EmptyButton,
@@ -314,16 +314,16 @@ CONFIG_SCHEMA = uart.UART_DEVICE_SCHEMA.extend(
             entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_MAX_DISTANCE): cv.Any(
-            cv.All(cv.distance, cv.Range(min=0.0, max=6.0)),
+            cv.All(cv.distance, cv.Range(min=0.0, max=8.0)),
             number.NUMBER_SCHEMA.extend(
                 {
                     cv.GenerateID(): cv.declare_id(MaxDistanceNumber),
                     cv.Required(CONF_NAME): cv.string_strict,
-                    cv.Optional(CONF_INITIAL_VALUE, default="6.0m"): cv.All(
-                        cv.distance, cv.Range(min=0.0, max=6.0)
+                    cv.Optional(CONF_INITIAL_VALUE, default="8.0m"): cv.All(
+                        cv.distance, cv.Range(min=0.0, max=8.0)
                     ),
                     cv.Optional(CONF_STEP, default="10cm"): cv.All(
-                        cv.distance, cv.Range(min=0.0, max=6.0)
+                        cv.distance, cv.Range(min=0.0, max=8.0)
                     ),
                     cv.Optional(CONF_RESTORE_VALUE, default=True): cv.boolean,
                     cv.Optional(
