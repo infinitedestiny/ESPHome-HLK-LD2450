@@ -380,7 +380,7 @@ def to_code(config):
             max_distance_number = yield number.new_number(
                 max_distance_config,
                 min_value=0.0,
-                max_value=6.0,
+                max_value=8.0,
                 step=max_distance_config[CONF_STEP],
             )
             yield cg.register_parented(max_distance_number, config[CONF_ID])
