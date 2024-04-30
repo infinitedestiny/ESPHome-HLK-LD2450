@@ -241,7 +241,7 @@ ZONE_SCHEMA = cv.Schema(
                 cv.GenerateID(): cv.declare_id(Zone),
                 cv.Required(CONF_NAME): cv.string_strict,
                 cv.Optional(CONF_MARGIN, default="25cm"): cv.All(
-                    cv.distance, cv.Range(min=0.0, max=6.0)
+                    cv.distance, cv.Range(min=0.0, max=8.0)
                 ),
                 cv.Optional(
                     CONF_TARGET_TIMEOUT, default="5s"
