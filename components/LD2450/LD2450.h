@@ -359,7 +359,7 @@ namespace esphome::ld2450
         int command_send_retries_ = 0;
 
         /// @brief The maximum detection distance in mm
-        int16_t max_detection_distance_ = 6000;
+        int16_t max_detection_distance_ = 8000;
 
         /// @brief The margin added to the max detection distance in which a detect target still counts as present, even though it is outside of the max detection distance
         int16_t max_distance_margin_ = 250;
