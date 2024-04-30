@@ -41,7 +41,7 @@ namespace esphome::ld2450
         void control(float value) override;
 
         /// @brief Initial value of this number component
-        float initial_value_ = 6.0f;
+        float initial_value_ = 8.0f;
 
         /// @brief Value restore flag. If set to true, the initial value will be restored from memory.
         bool restore_value_ = true;
